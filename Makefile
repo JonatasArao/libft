@@ -5,7 +5,8 @@ RM		=	rm -rf
 SRCS	=	srcs/ft_isalpha.c \
 			srcs/ft_isdigit.c \
 			srcs/ft_isalnum.c \
-			srcs/ft_isascii.c
+			srcs/ft_isascii.c \
+			srcs/ft_isprint.c
 OBJS	=	$(SRCS:.c=.o)
 INC		=	includes
 HEADER	=	$(INC)/libft.h
