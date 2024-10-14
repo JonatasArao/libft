@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/14 10:50:20 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/10/14 10:50:30 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/10/14 11:05:50 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#include "libft.h"
 
-int	ft_isalpha(int c);
-
-int	ft_isdigit(int c);
-
-int	ft_isalnum(int c);
-
-int	ft_isascii(int c);
-
-int	ft_isprint(int c);
-
-int	ft_toupper(int c);
-
-int	ft_tolower(int c);
-
-#endif
+int	ft_tolower(int c)
+{
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
+}
