@@ -14,7 +14,7 @@ OBJS	=	$(SRCS:.c=.o)
 INC		=	includes
 HEADER	=	libft.h
 
-all: $(NAME) clean
+all: $(NAME)
 
 $(NAME) : $(OBJS)
 	ar rcs $(NAME) $(OBJS)
