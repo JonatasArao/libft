@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/14 11:32:58 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/10/14 11:33:30 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/10/14 11:56:34 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stddef.h>
+#include "libft.h"
 
-int		ft_isalpha(int c);
+size_t	ft_strlen(const char *s)
+{
+	size_t	length;
 
-int		ft_isdigit(int c);
-
-int		ft_isalnum(int c);
-
-int		ft_isascii(int c);
-
-int		ft_isprint(int c);
-
-int		ft_toupper(int c);
-
-int		ft_tolower(int c);
-
-size_t	ft_strlen(const char *s);
-
-#endif
+	length = 0;
+	while (s[length])
+		length++;
+	return (length);
+}
