@@ -9,9 +9,9 @@ SRCS	=	ft_isalpha.c \
 			ft_isprint.c \
 			ft_toupper.c \
 			ft_tolower.c \
-			ft_strlen.c
+			ft_strlen.c \
+			ft_strdup.c
 OBJS	=	$(SRCS:.c=.o)
-INC		=	includes
 HEADER	=	libft.h
 
 all: $(NAME)

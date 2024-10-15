@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/14 16:29:23 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/10/14 16:27:53 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/10/15 11:49:17 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
-# include <stdlib.h>
+#include "libft.h"
 
-int		ft_isalpha(int c);
+char	*ft_strdup(const char *s)
+{
+	size_t		i;
+	char		*str;
 
-int		ft_isdigit(int c);
-
-int		ft_isalnum(int c);
-
-int		ft_isascii(int c);
-
-int		ft_isprint(int c);
-
-int		ft_toupper(int c);
-
-int		ft_tolower(int c);
-
-size_t	ft_strlen(const char *s);
-
-char	*ft_strdup(const char *s);
-
-#endif
+	str = (char *) malloc(ft_strlen(s) + 1);
+	if (!str)
+		return (NULL);
+	i = 0;
+	while (s[i])
+	{
+		str[i] = s[i];
+		i++;
+	}
+	str[i] = '\0';
+	return (str);
+}
