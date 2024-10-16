@@ -10,7 +10,8 @@ SRCS	=	ft_isalpha.c \
 			ft_toupper.c \
 			ft_tolower.c \
 			ft_strlen.c \
-			ft_strdup.c
+			ft_strdup.c \
+			ft_strlcpy.c
 OBJS	=	$(SRCS:.c=.o)
 HEADER	=	libft.h
 
