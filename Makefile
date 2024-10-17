@@ -13,7 +13,8 @@ SRCS	=	ft_isalpha.c \
 			ft_strdup.c \
 			ft_strlcpy.c \
 			ft_strlcat.c \
-			ft_strchr.c
+			ft_strchr.c \
+			ft_strrchr.c
 OBJS	=	$(SRCS:.c=.o)
 HEADER	=	libft.h
 
