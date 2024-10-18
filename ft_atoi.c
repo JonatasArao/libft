@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 15:59:13 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/18 17:33:39 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/18 18:41:14 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ int	ft_atoi(const char *nptr)
 
 	n = 0;
 	sign = 1;
-	while (*nptr == ' ' || *nptr == '\f' || *nptr == '\n' || *nptr == '\f'
-		|| *nptr == '\r' || *nptr == '\t' || *nptr == '\v')
+	while (*nptr == ' ' || (*nptr >= '\t' && *nptr <= '\r'))
 		nptr++;
 	if (*nptr == '-')
 		sign = -1;
