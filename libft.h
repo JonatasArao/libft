@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/18 19:52:45 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/19 15:12:01 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,5 +49,7 @@ int		ft_atoi(const char *nptr);
 void	*ft_memset(void *s, int c, size_t n);
 
 void	ft_bzero(void *s, size_t n);
+
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
