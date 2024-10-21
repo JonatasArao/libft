@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/21 08:55:33 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/21 10:12:24 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,7 @@ void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t nmemb, size_t size);
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+
+void	*ft_memchr(const void *s, int c, size_t n);
 
 #endif
