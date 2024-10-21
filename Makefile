@@ -22,7 +22,8 @@ SRCS	=	ft_isalpha.c \
 			ft_bzero.c \
 			ft_calloc.c \
 			ft_memcpy.c \
-			ft_memchr.c
+			ft_memchr.c \
+			ft_memcmp.c
 OBJS	=	$(SRCS:.c=.o)
 HEADER	=	libft.h
 
