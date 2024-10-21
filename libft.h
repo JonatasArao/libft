@@ -6,13 +6,14 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/21 13:03:17 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/21 15:42:09 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isalpha(int c);
 
@@ -59,5 +60,7 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n);
+
+void	ft_putchar_fd(char c, int fd);
 
 #endif
