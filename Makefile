@@ -34,7 +34,8 @@ SRCS	=	ft_isalpha.c \
 			ft_strtrim.c \
 			ft_striteri.c \
 			ft_strmapi.c \
-			ft_itoa.c
+			ft_itoa.c \
+			ft_split.c
 OBJS	=	$(SRCS:.c=.o)
 HEADER	=	libft.h
 
