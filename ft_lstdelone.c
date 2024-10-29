@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:17:38 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/29 15:31:56 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/29 17:23:49 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,6 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
-	{
-		del(lst->content);
-		free(lst);
-	}
+	del(lst->content);
+	free(lst);
 }
