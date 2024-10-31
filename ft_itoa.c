@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 15:40:47 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/23 17:11:31 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:14:53 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*ft_itoa(int n)
 	int		sign;
 
 	numsize = ft_numsize(n);
-	n_char = ft_calloc(numsize + 1, 1);
+	n_char = (char *)ft_calloc(numsize + 1, sizeof(char));
 	if (!n_char)
 		return (NULL);
 	sign = 1;

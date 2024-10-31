@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/14 16:27:53 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/15 11:49:17 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/30 16:20:39 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strdup(const char *s)
 	size_t		i;
 	char		*str;
 
-	str = (char *) malloc(ft_strlen(s) + 1);
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!str)
 		return (NULL);
 	i = 0;

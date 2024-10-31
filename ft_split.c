@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:26:10 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/24 18:24:02 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/31 14:13:26 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ char	**ft_split(char const *s, char c)
 	unsigned int	i;
 
 	word_count = ft_word_count(s, c);
-	split = (char **) ft_calloc(word_count + 1, sizeof(char *));
+	split = (char **)ft_calloc(word_count + 1, sizeof(char *));
 	if (!split)
 		return (NULL);
 	i = 0;

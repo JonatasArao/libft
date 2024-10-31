@@ -6,11 +6,9 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 13:23:29 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/23 14:32:57 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/10/31 15:49:27 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
