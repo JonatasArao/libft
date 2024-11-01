@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone_bonus.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 15:00:36 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/28 15:06:48 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/10/28 16:17:38 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/11/01 11:13:11 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	while (lst && lst->next)
-		lst = lst->next;
-	return (lst);
+	del(lst->content);
+	free(lst);
 }
