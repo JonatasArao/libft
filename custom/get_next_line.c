@@ -6,21 +6,11 @@
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 08:36:43 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/11/27 10:25:23 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/11/27 11:37:41 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static void	*ft_delpointer(void **ptr)
-{
-	if (ptr && *ptr)
-	{
-		free(*ptr);
-		*ptr = NULL;
-	}
-	return (NULL);
-}
 
 static char	*read_until_newline(int fd, char *remainder)
 {

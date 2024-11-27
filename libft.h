@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/11/27 10:25:19 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/11/27 11:42:02 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,5 +119,7 @@ int		ft_atoi_base(const char *nptr, char *base);
 void	*ft_free_matrix(void **matrix, size_t size);
 
 int		ft_isxdigit(int c);
+
+void	*ft_delpointer(void **ptr);
 
 #endif
