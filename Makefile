@@ -2,7 +2,7 @@ CC			=	cc
 CFLAGS		=	-Wall -Wextra -Werror
 NAME		=	libft.a
 RM			=	rm -rf
-SRCS		=	ft_isalpha.c \
+MANDATORY	=	ft_isalpha.c \
 				ft_isdigit.c \
 				ft_isalnum.c \
 				ft_isascii.c \
@@ -36,35 +36,46 @@ SRCS		=	ft_isalpha.c \
 				ft_strmapi.c \
 				ft_itoa.c \
 				ft_split.c
-OBJS		=	$(SRCS:.c=.o)
-BONUS_SRCS	=	ft_lstnew_bonus.c \
-				ft_lstadd_front_bonus.c \
-				ft_lstsize_bonus.c \
-				ft_lstlast_bonus.c \
-				ft_lstadd_back_bonus.c \
-				ft_lstdelone_bonus.c \
-				ft_lstclear_bonus.c \
-				ft_lstiter_bonus.c \
-				ft_lstmap_bonus.c
-BONUS_OBJS	=	$(BONUS_SRCS:.c=.o)
-HEADER		=	libft.h
-
-ifeq ($(findstring bonus, $(MAKECMDGOALS)), bonus)
-	OBJS += $(BONUS_OBJS)
-endif
+BONUS		=	ft_lstnew.c \
+				ft_lstadd_front.c \
+				ft_lstsize.c \
+				ft_lstlast.c \
+				ft_lstadd_back.c \
+				ft_lstdelone.c \
+				ft_lstclear.c \
+				ft_lstiter.c \
+				ft_lstmap.c
+CUSTOM		=	ft_atoi_base.c \
+				ft_isxdigit.c \
+				ft_free_matrix.c
+OBJS_DIR	=	objs
+OBJS		=	$(addprefix $(OBJS_DIR)/, \
+				$(MANDATORY:.c=.o) \
+				$(BONUS:.c=.o) \
+				$(CUSTOM:.c=.o))
+HEADER_DIR = includes
+HEADER = $(HEADER_DIR)/libft.h
+INCLUDES = -I$(HEADER_DIR)
 
 all: $(NAME)
-
-bonus : $(NAME)
 
 $(NAME) : $(OBJS)
 	ar rcs $@ $?
 
-%.o: %.c $(HEADER)
-	$(CC) $(CFLAGS) -c $< -o $@
+$(OBJS_DIR):
+	mkdir -p $(OBJS_DIR)
+
+$(OBJS_DIR)/%.o: mandatory/%.c $(HEADER) | $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(OBJS_DIR)/%.o: bonus/%.c $(HEADER) | $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
+
+$(OBJS_DIR)/%.o: custom/%.c $(HEADER) | $(OBJS_DIR)
+	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
 clean:
-	$(RM) $(OBJS) $(BONUS_OBJS)
+	$(RM) $(OBJS) $(OBJS_DIR)
 
 fclean: clean
 	$(RM) $(NAME)
