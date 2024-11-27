@@ -59,6 +59,17 @@ INCLUDES = -I$(HEADER_DIR)
 
 all: $(NAME)
 
+debug: CFLAGS += -g
+debug: all
+
+clean:
+	$(RM) $(OBJS) $(OBJS_DIR)
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
+
 $(NAME) : $(OBJS)
 	ar rcs $@ $?
 
@@ -74,12 +85,4 @@ $(OBJS_DIR)/%.o: bonus/%.c $(HEADER) | $(OBJS_DIR)
 $(OBJS_DIR)/%.o: custom/%.c $(HEADER) | $(OBJS_DIR)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-clean:
-	$(RM) $(OBJS) $(OBJS_DIR)
-
-fclean: clean
-	$(RM) $(NAME)
-
-re: fclean all
-
-.PHONY: all bonus clean fclean re
+.PHONY: all clean fclean re

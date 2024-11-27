@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:26:10 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/10/31 14:13:26 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/11/27 08:23:34 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,14 +50,6 @@ static char	*ft_get_next_word(char const **s, char c)
 		return (NULL);
 	*s += end;
 	return (word);
-}
-
-static void	*ft_free_matrix(void **matrix, int size)
-{
-	while (size-- > 0)
-		free(matrix[size]);
-	free(matrix);
-	return (NULL);
 }
 
 char	**ft_split(char const *s, char c)
