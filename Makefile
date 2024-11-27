@@ -45,7 +45,8 @@ BONUS		=	ft_lstnew.c \
 				ft_lstclear.c \
 				ft_lstiter.c \
 				ft_lstmap.c
-CUSTOM		=	ft_atoi_base.c \
+CUSTOM		=	get_next_line.c \
+				ft_atoi_base.c \
 				ft_isxdigit.c \
 				ft_free_matrix.c
 OBJS_DIR	=	objs
