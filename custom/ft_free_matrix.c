@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/27 06:44:01 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/11/27 06:44:26 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/11/27 10:20:25 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,11 @@
 
 void	*ft_free_matrix(void **matrix, size_t size)
 {
-	while (size-- > 0)
-		free(matrix[size]);
-	free(matrix);
+	if (matrix)
+	{
+		while (size-- > 0)
+			free(matrix[size]);
+		free(matrix);
+	}
 	return (NULL);
 }
