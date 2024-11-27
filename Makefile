@@ -54,9 +54,8 @@ OBJS		=	$(addprefix $(OBJS_DIR)/, \
 				$(MANDATORY:.c=.o) \
 				$(BONUS:.c=.o) \
 				$(CUSTOM:.c=.o))
-HEADER_DIR = includes
-HEADER = $(HEADER_DIR)/libft.h
-INCLUDES = -I$(HEADER_DIR)
+HEADER = libft.h
+INCLUDES = -I.
 
 all: $(NAME)
 
