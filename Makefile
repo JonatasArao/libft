@@ -51,7 +51,8 @@ CUSTOM		=	get_next_line.c \
 				ft_free_matrix.c \
 				ft_delpointer.c \
 				ft_strtoupperi.c \
-				ft_strtoloweri.c
+				ft_strtoloweri.c \
+				ft_count_if.c
 OBJS_DIR	=	objs
 OBJS		=	$(addprefix $(OBJS_DIR)/, \
 				$(MANDATORY:.c=.o) \
