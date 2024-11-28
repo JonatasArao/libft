@@ -49,7 +49,9 @@ CUSTOM		=	get_next_line.c \
 				ft_atoi_base.c \
 				ft_isxdigit.c \
 				ft_free_matrix.c \
-				ft_delpointer.c
+				ft_delpointer.c \
+				ft_strtoupperi.c \
+				ft_strtoloweri.c
 OBJS_DIR	=	objs
 OBJS		=	$(addprefix $(OBJS_DIR)/, \
 				$(MANDATORY:.c=.o) \
