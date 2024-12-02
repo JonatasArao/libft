@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_if.c                                      :+:      :+:    :+:   */
+/*   ft_strforeach.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/28 11:57:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/12/02 13:51:04 by jarao-de         ###   ########.fr       */
+/*   Created: 2024/12/02 13:40:53 by jarao-de          #+#    #+#             */
+/*   Updated: 2024/12/02 13:46:51 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_count_if(char **tab, int (*f)(char*))
+void	ft_strforeach(char *tab, int (*f)(int))
 {
-	int	count;
-
-	count = 0;
+	if (!tab)
+		return ;
 	while (*tab)
-		if (f(*tab++))
-			count++;
-	return (count);
+	{
+		*tab = f(*tab);
+		tab++;
+	}
 }
