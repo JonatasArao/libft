@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/11/28 12:10:07 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/12/02 13:31:17 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,10 +121,6 @@ void	*ft_free_matrix(void **matrix, size_t size);
 int		ft_isxdigit(int c);
 
 void	*ft_delpointer(void **ptr);
-
-void	ft_strtoupperi(unsigned int i, char *s);
-
-void	ft_strtoloweri(unsigned int i, char *s);
 
 int		ft_count_if(char **tab, int (*f)(char *));
 
