@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 08:50:14 by jarao-de          #+#    #+#             */
-/*   Updated: 2024/12/02 13:48:25 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/12/03 09:24:17 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -127,5 +127,11 @@ int		ft_count_if(char **tab, int (*f)(char *));
 int		ft_strall(const char *s, int (*f)(int));
 
 void	ft_strforeach(char *tab, int (*f)(int));
+
+void	ft_strforeach(char *tab, int (*f)(int));
+
+char	*ft_strtok(char *str, const char *delim);
+
+char	*ft_strtok_r(char *str, const char *delim, char **saveptr);
 
 #endif
