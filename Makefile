@@ -54,7 +54,8 @@ CUSTOM		=	get_next_line.c \
 				ft_strall.c \
 				ft_strforeach.c \
 				ft_strtok.c \
-				ft_strtok_r.c
+				ft_strtok_r.c \
+				ft_isspace.c
 OBJS_DIR	=	objs
 OBJS		=	$(addprefix $(OBJS_DIR)/, \
 				$(MANDATORY:.c=.o) \
